@@ -10,7 +10,6 @@ public void drawRoundRect(@NonNull RectF rect, float rx, float ry, @NonNull Pain
 }
 
 rx and ry  cant use as shape corner,so let's us ShaderView
-
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
   <solid android:color="#FF00BCD4"/>
   <corners
