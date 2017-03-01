@@ -8,14 +8,6 @@ public void drawRoundRect(@NonNull RectF rect, float rx, float ry, @NonNull Pain
     drawRoundRect(rect.left, rect.top, rect.right, rect.bottom, rx, ry, paint);
     
 }
- shape xmlns:android="http://schemas.android.com/apk/res/android"
-    solid android:color="#FF00BCD4"
-    corners
-         android:bottomLeftRadius="8dp"
-        android:bottomRightRadius="8dp"
-         android:topLeftRadius="8dp"
-         android:topRightRadius="8dp"
-  shape
  
- rx and ry  cant use as shape corner,so let's us ShaderView
+ rx and ry not so flexible to every corner like shape corner(like this: android:bottomLeftRadius="8dp" android:bottomRightRadius="8dp" android:topLeftRadius="8dp" android:topRightRadius="8dp"),so ShaderView come here!
      
