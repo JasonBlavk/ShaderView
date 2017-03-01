@@ -1,6 +1,5 @@
 # ShaderView 2017/3/1 17:30
 Canvas's method [drawRoundRect()] can’t draw view with specfic corner,here is the way~
-
   /**
      * Draw the specified round-rect using the specified paint. The roundrect
      * will be filled or framed based on the Style in the paint.
@@ -15,6 +14,7 @@ Canvas's method [drawRoundRect()] can’t draw view with specfic corner,here is 
     }
     
     rx and ry  cant use as shape corner,so let's us ShaderView
+
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
       <solid android:color="#FF00BCD4"/>
       <corners
