@@ -41,16 +41,26 @@ public class ShaderView extends View {
         mXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
     }
 
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mRectF.set(getPaddingLeft(), getPaddingTop(), getWidth(), getHeight() - getPaddingBottom());
         if (getMeasuredWidth() > 0 && getMeasuredHeight() > 0) {
 
-            Drawable drawable = getResources().getDrawable(R.drawable.corner_blue);
-            //资源drawable必须转化成bitmap，mXfermode才会生效!
+            Drawable drawable = getResources().getDrawable(R.drawable.corner_top_bottom_left);
             mRectBitmap = drawableToBitamp(drawable, getMeasuredWidth(), getMeasuredHeight());
         }
+    }
+
+    /**
+     * @param drawableRes 资源文件控制corner radius
+     */
+    public void setRectBitmap(int drawableRes) {
+        Drawable drawable = getResources().getDrawable(drawableRes);
+        //资源drawable必须转化成bitmap，mXfermode才会生效!
+        mRectBitmap = drawableToBitamp(drawable, getMeasuredWidth(), getMeasuredHeight());
+        invalidate();
     }
 
     @Override
